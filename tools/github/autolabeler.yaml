@@ -20,9 +20,9 @@ color_definitions:
   # Color between blue (calm) and green (relaxed):
   # we want to set a relaxed and easygoing mood for them.
 
-  - &reviewerColor f98100
+  - &reviewerColor 800080
   # Reviewer needs to take an action.
-  # Color between blue (calm) and red (this is somewhat urgent).
+  # "Less aggressive than red, but more active than blue." (Wikipedia)
 
   - &inactiveColor D2DAE1
   # No more activity required on this.
