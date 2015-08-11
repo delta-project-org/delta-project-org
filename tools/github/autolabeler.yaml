@@ -7,29 +7,31 @@ color_definitions:
 # Colors are picked up via their anchors (things that start with &).
 # Their presence inside of color_definitions does not matter.
 
-  - &alertColor ff0000
+  - &alertColor 'ff0000'
   # Confirmed high priority.
   # Brightest possible red.
 
-  - &pendingColor f98100
+  - &pendingColor 'f98100'
   # Something took too long and now requires attention.
   # Orange - that's almost red but not quite.
 
-  - &submitterColor 006aec
+  - &submitterColor '006aec'
   # Submitter needs to take an action.
   # Color between blue (calm) and green (relaxed):
   # we want to set a relaxed and easygoing mood for them.
 
-  - &reviewerColor 800080
+  - &reviewerColor '800080'
   # Reviewer needs to take an action.
   # "Less aggressive than red, but more active than blue." (Wikipedia)
 
-  - &inactiveColor D2DAE1
+  - &inactiveColor 'D2DAE1'
   # No more activity required on this.
   # Grey/white to avoid drawing attention.
 
-  - &environmentColor BFD4F2
+  - &environmentColor 'BFD4F2'
   # Neutral classification.
+  # This is for labels that classify by environment, such as
+  # 'Env:i386' or 'Env:Solaris'. We do not have such labels yet.
 
 labels:
   # Each label is a key-dict pair.
