@@ -38,8 +38,8 @@ labels:
   #   color: Background color to display the label in on GitHub
   #   text: Explanatory text for the label to supply to GitHub
   #         (currently not supported by the GitHub API but this may come)
-  #   can-add: List of groups that have permissions to add that label
-  #   can-remove: List of groups that have permissions to remove that label
+  #   can_add: List of groups that have permissions to add that label
+  #   can_remove: List of groups that have permissions to remove that label
   #   Two special permission groups exist:
   #   - EVERYONE people with read access to the repository
   #   - SUBMITTER the person who opened the PR/issue being processed
@@ -47,8 +47,8 @@ labels:
   Needs:Evaluation:
     color: *reviewerColor
     text: More discussion is needed before we can decide what to do about it.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Needs:Work:
     # If applied to an Issue, this is a call to submit a PR.
@@ -56,22 +56,22 @@ labels:
     # needs to be done before the PR can be merged.
     color: *submitterColor
     text: It is clear what to do, but that work has not yet begun (or completed).
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Needs:Review:
     # This is usually applied when a coder believes the work is complete,
     # or when an Issue submitter believes that Evaluation is complete.
     color: *reviewerColor
     text: This PR can benefit from a review.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Needs:MoreReview:
     color: *reviewerColor
     text: A review was done but the reviewer found he could not complete it.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Needs:Merge:
     # This is applied to a PR when a reviewer has concluded that the PR
@@ -80,53 +80,53 @@ labels:
     # was applied.
     color: *pendingColor
     text: This PR was ready for merging when this label was applied.
-    can-add: [Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Done:
     color: *inactiveColor
     text: Issue is considered done, but maybe the initial submitter should take a look to confirm and close this.
-    can-add: [SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [SUBMITTER, Review Team, Merge Team, Owners]
 
   Prio:High:
     color: *alertColor
     text: This is more important than others of the same category.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Easy:
     color: *submitterColor
     text: This is a good task for gaining experience with working on the project.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:organization:
     color: *topicColor
     text: This concerns the build tools.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Tools:
     color: *topicColor
     text: This concerns the build tools.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Language:
     color: *topicColor
     text: Language design issues.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Compiler:
     color: *topicColor
     text: Compiler compiler toolchain issues.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Library:Std:
     color: *topicColor
     text: Issues in the standard library.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
