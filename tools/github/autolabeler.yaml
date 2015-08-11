@@ -28,10 +28,8 @@ color_definitions:
   # No more activity required on this.
   # Grey/white to avoid drawing attention.
 
-  - &environmentColor 'BFD4F2'
-  # Neutral classification.
-  # This is for labels that classify by environment, such as
-  # 'Env:i386' or 'Env:Solaris'. We do not have such labels yet.
+  - &topicColor 'BFD4F2'
+  # General area of interest within the project.
 
 labels:
   # Each label is a key-dict pair.
@@ -82,17 +80,53 @@ labels:
     # was applied.
     color: *pendingColor
     text: This PR was ready for merging when this label was applied.
-    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can-add: [Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
-  Prio:Hi:
+  Done:
+    color: *inactiveColor
+    text: Issue is considered done, but maybe the initial submitter should take a look to confirm and close this.
+    can-add: [SUBMITTER, Review Team, Merge Team, Owners]
+    can-remove: [SUBMITTER, Review Team, Merge Team, Owners]
+
+  Prio:High:
     color: *alertColor
     text: This is more important than others of the same category.
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Easy:
-    color: *pendingColor
+    color: *submitterColor
     text: This is a good task for gaining experience with working on the project.
+    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+
+  Topic:organization
+    color: *topicColor
+    text: This concerns the build tools.
+    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+
+  Topic:Tools
+    color: *topicColor
+    text: This concerns the build tools.
+    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+
+  Topic:Language
+    color: *topicColor
+    text: Language design issues.
+    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+
+  Topic:Compiler
+    color: *topicColor
+    text: Compiler compiler toolchain issues.
+    can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+
+  Topic:Library:Std
+    color: *topicColor
+    text: Issues in the standard library.
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
