@@ -101,31 +101,31 @@ labels:
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
-  Topic:organization
+  Topic:organization:
     color: *topicColor
     text: This concerns the build tools.
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
-  Topic:Tools
+  Topic:Tools:
     color: *topicColor
     text: This concerns the build tools.
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
-  Topic:Language
+  Topic:Language:
     color: *topicColor
     text: Language design issues.
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
-  Topic:Compiler
+  Topic:Compiler:
     color: *topicColor
     text: Compiler compiler toolchain issues.
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can-remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
-  Topic:Library:Std
+  Topic:Library:Std:
     color: *topicColor
     text: Issues in the standard library.
     can-add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
