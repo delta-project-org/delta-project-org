@@ -3,6 +3,15 @@
 # which group of contributors should do it. They are prefixed with "Needs:"
 # Priority labels indicate heightened urgency. They are prefixed with "Prio:"
 
+# A GitHub user account has been created for each user group defined:
+#   delta-project-org-everyone
+#   delta-project-org-submitter
+#   delta-project-org-review-team
+#   delta-project-org-merge-team
+#   delta-project-org-owner
+# These serve to quickly validate that user group permissions
+# match the intended workflows.
+
 color_definitions:
 # Colors are picked up via their anchors (things that start with &).
 # Their presence inside of color_definitions does not matter.
