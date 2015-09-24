@@ -41,12 +41,12 @@ labels:
   #   can_add: List of groups that have permissions to add that label
   #   can_remove: List of groups that have permissions to remove that label
   #   Two special permission groups exist:
-  #   - EVERYONE people with read access to the repository
-  #   - SUBMITTER the person who opened the PR/issue being processed
+  #   - EVERYONE who can send pull requests
+  #   - SUBMITTER is the person who opened the PR/issue being processed
 
-  Needs:Evaluation:
+  Needs:Discussion:
     color: *reviewerColor
-    text: More discussion is needed before we can decide what to do about it.
+    text: More discussion is needed on how to best proceed.
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
@@ -57,7 +57,7 @@ labels:
     color: *submitterColor
     text: It is clear what to do, but that work has not yet begun (or completed).
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [SUBMITTER]
 
   Needs:Review:
     # This is usually applied when a coder believes the work is complete,
@@ -65,13 +65,13 @@ labels:
     color: *reviewerColor
     text: This PR can benefit from a review.
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_remove: [Review Team]
 
   Needs:MoreReview:
     color: *reviewerColor
     text: A review was done but the reviewer found he could not complete it.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [Review Team]
+    can_remove: [Review Team]
 
   Needs:Merge:
     # This is applied to a PR when a reviewer has concluded that the PR
@@ -92,8 +92,8 @@ labels:
   Prio:High:
     color: *alertColor
     text: This is more important than others of the same category.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [Owners]
+    can_remove: [Owners]
 
   Easy:
     color: *submitterColor
@@ -103,30 +103,30 @@ labels:
 
   Topic:organization:
     color: *topicColor
-    text: This concerns the build tools.
+    text: Issue with project organization tools or workflows.
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Tools:
     color: *topicColor
-    text: This concerns the build tools.
+    text: Issue with build tools or how we use them.
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Language:
     color: *topicColor
-    text: Language design issues.
+    text: Issue with the programming language design.
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Compiler:
     color: *topicColor
-    text: Compiler compiler toolchain issues.
+    text: Issue with the compiler toolchain.
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
 
   Topic:Library:Std:
     color: *topicColor
-    text: Issues in the standard library.
+    text: Issues with the standard library.
     can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
     can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
