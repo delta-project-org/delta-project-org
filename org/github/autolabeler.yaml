@@ -6,8 +6,8 @@
 # A GitHub user account has been created for each user group defined:
 #   delta-project-org-everyone
 #   delta-project-org-submitter
-#   delta-project-org-review-team
-#   delta-project-org-merge-team
+#   delta-project-org-reviewer
+#   delta-project-org-editor
 #   delta-project-org-owner
 # These serve to quickly validate that user group permissions
 # match the intended workflows.
@@ -56,8 +56,8 @@ labels:
   Needs:Discussion:
     color: *reviewerColor
     text: More discussion is needed on how to best proceed.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
 
   Needs:Work:
     # If applied to an Issue, this is a call to submit a PR.
@@ -65,7 +65,7 @@ labels:
     # needs to be done before the PR can be merged.
     color: *submitterColor
     text: It is clear what to do, but that work has not yet begun (or completed).
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
     can_remove: [SUBMITTER]
 
   Needs:Review:
@@ -73,14 +73,14 @@ labels:
     # or when an Issue submitter believes that Evaluation is complete.
     color: *reviewerColor
     text: This PR can benefit from a review.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [Review Team]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [Reviewers]
 
   Needs:MoreReview:
     color: *reviewerColor
     text: A review was done but the reviewer found he could not complete it.
-    can_add: [Review Team]
-    can_remove: [Review Team]
+    can_add: [Reviewers]
+    can_remove: [Reviewers]
 
   Needs:Merge:
     # This is applied to a PR when a reviewer has concluded that the PR
@@ -89,14 +89,14 @@ labels:
     # was applied.
     color: *pendingColor
     text: This PR was ready for merging when this label was applied.
-    can_add: [Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
 
   Done:
     color: *inactiveColor
     text: Issue is considered done, but maybe the initial submitter should take a look to confirm and close this.
-    can_add: [SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [SUBMITTER, Reviewers, Editors, Owners]
 
   Prio:High:
     color: *alertColor
@@ -107,35 +107,35 @@ labels:
   Easy:
     color: *submitterColor
     text: This is a good task for gaining experience with working on the project.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
 
   Topic:organization:
     color: *topicColor
     text: Issue with project organization tools or workflows.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
 
   Topic:Tools:
     color: *topicColor
     text: Issue with build tools or how we use them.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
 
   Topic:Language:
     color: *topicColor
     text: Issue with the programming language design.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
 
   Topic:Compiler:
     color: *topicColor
     text: Issue with the compiler toolchain.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
 
   Topic:Library:Std:
     color: *topicColor
     text: Issues with the standard library.
-    can_add: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
-    can_remove: [EVERYONE, SUBMITTER, Review Team, Merge Team, Owners]
+    can_add: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
+    can_remove: [EVERYONE, SUBMITTER, Reviewers, Editors, Owners]
