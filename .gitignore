@@ -1,0 +1,80 @@
+### Backup files left by text editors
+
+# Emacs, joe
+*~
+
+# Many Windows editors
+*.bak
+
+
+### Temporary files
+
+# Emacs lock file
+.#*
+
+# vim temporary file
+.*.swp
+
+# Hidden file created by Mac OS X Finder
+.DS_Store
+
+
+### Both C and C++
+
+# Compiled Object files
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Shared objects (inc. Windows DLLs)
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.la
+*.lib
+*.lo
+
+# Executables
+*.out
+*.exe
+*.app
+
+
+### C
+
+# Compiled Object files
+*.ko
+*.elf
+
+# Executables
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+
+
+### C++
+
+# Compiled Object files
+*.slo
+
+# Compiled Static libraries
+*.lai
+
+
+### CMake
+
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
